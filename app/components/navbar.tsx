@@ -8,7 +8,7 @@ import getCurrentUser from "../actions/getCurrentUser";
 import { signOut } from "next-auth/react";
 
 interface NavbarProps{
-  currentUser?: any; //TODO define type of user object returned by firebase auth service
+  currentUser?: any;
 }
 
 const Navbar:React.FC<NavbarProps> =  ({currentUser}) => {

@@ -13,7 +13,7 @@ export function PokemonGrid({ pokemonList }: PokemonGridProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
 
-  // filter the text
+
   const searchFilter = (pokemonList: any) => {
     return pokemonList.filter(
       (pokemon: any) =>
@@ -21,10 +21,8 @@ export function PokemonGrid({ pokemonList }: PokemonGridProps) {
     );
   };
 
-  // save the filtered array of objects
   const filteredPokemonList = searchFilter(pokemonList);
 
-  // calculate pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredPokemonList.slice(
@@ -32,7 +30,6 @@ export function PokemonGrid({ pokemonList }: PokemonGridProps) {
     indexOfLastItem
   );
 
-  // handle page change
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
