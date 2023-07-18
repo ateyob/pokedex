@@ -1,7 +1,7 @@
 Pokedex Pokémon Management Dashboard
 
 
-Welcome to the Pokedex Pokémon Management Dashboard! This web application allows you to search for Pokémon and view their details using the Pokedex API. It is built using Next.js 13 with App Router for seamless navigation.
+Welcome to the Pokedex Pokémon Management Dashboard! This web application allows you to search for Pokémon and view their details using the Pokedex API. It is built using Next.js 13 with App Router for seamless navigation and also using TypeScript.
 
 Live Demo: https://pokedex-ateyob.vercel.app/
 
