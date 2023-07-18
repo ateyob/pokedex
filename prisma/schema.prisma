@@ -20,7 +20,7 @@ model User {
   hashedPassword  String?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
-  favoriteIds     Json 
+  favoriteIds     Json? 
   // s
 
   accounts Account[]
