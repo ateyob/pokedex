@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Pokedex Pokémon Management Dashboard
 
-## Getting Started
 
-First, run the development server:
+Welcome to the Pokedex Pokémon Management Dashboard! This web application allows you to search for Pokémon and view their details using the Pokedex API. It is built using Next.js 13 with App Router for seamless navigation.
 
-```bash
-npm run dev
-# or
+Live Demo: https://pokedex-ateyob.vercel.app/
+
+Note: Some functionalities, such as favorites, may not work properly in the production mode. However, we are actively working to fix these issues, and they will be resolved soon.
+
+
+Features
+
+- Pokémon Finder: Search and explore a vast collection of Pokémon.
+- Pokémon Details: View detailed information about each Pokémon, including their abilities, types, stats, and more.
+
+
+Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository to your local machine.
+
+2. Navigate to the project's directory.
+
+3. Install the necessary packages using either Yarn or npm.
+
+# Using Yarn
+yarn
+
+# Using npm
+npm install
+
+3. Start the development server.
+
+# Using Yarn
 yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Using npm
+npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Open your browser and visit http://localhost:3000 to see the Pokedex Pokémon Management Dashboard in action.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for choosing the Pokedex Pokémon Management Dashboard! We hope you enjoy using it to explore the world of Pokémon.
