@@ -66,10 +66,10 @@ const Navbar:React.FC<NavbarProps> =  ({currentUser}) => {
               { currentUser ? 
                 <>
                   <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
-                    <Link href="/favorites">My Favorites</Link>
+                      {currentUser.name}
                   </li>
                   <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
-                      {currentUser.name}
+                    <Link href="/favorites">My Favorites</Link>
                   </li>
                   <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
                     <a onClick={() => signOut()} className="text-black cursor-pointer">Log Out</a>
@@ -89,8 +89,12 @@ const Navbar:React.FC<NavbarProps> =  ({currentUser}) => {
         {
           currentUser ? (
               <>
-                  <div className="text-white cursor-pointer">My Favorites</div>
                   <a className="text-white font-bold italic">{currentUser.name}</a>
+                  <div className="text-white cursor-pointer">
+                    <Link href='/favorites'>
+                      My Favorites
+                    </Link>
+                  </div>
                   <a onClick={() => signOut()} className="text-white cursor-pointer">Log Out</a>
               </>
           ):(

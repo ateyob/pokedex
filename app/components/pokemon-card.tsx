@@ -4,12 +4,13 @@ import { getPokemon } from "@/lib/pokemonAPI";
 import Image from "next/image";
 import HeartButton from "./HeartButton";
 
-
 interface PokemonCardProps {
   name: string;
+  data: any;
+  favourites: any;
 }
 
-export function PokemonCard({ name }: PokemonCardProps) {
+export function PokemonCard({ name, data, favourites }: PokemonCardProps) {
   const [imageUrl, setImageUrl] = useState<string>("");
 
   useEffect(() => {
@@ -27,8 +28,7 @@ export function PokemonCard({ name }: PokemonCardProps) {
   }, [name]);
 
   return (
-    <Link
-      href={name}
+    <Link href={name}
       className="
         group rounded-lg border border-transparent 
         m-3 px-5 py-4 transition-colors
@@ -45,11 +45,39 @@ export function PokemonCard({ name }: PokemonCardProps) {
           </h2>
         </div>
         <div className=" flex ">
-          <HeartButton />
+          {Array.isArray(favourites) &&
+            (function () {
+              const foundItem = favourites.find(
+                (item) => item.name === data.name
+              );
+              return foundItem ? (
+                <HeartButton
+                  data={data}
+                  favourites={favourites}
+                  item={true}
+                  foundItem={foundItem}
+                />
+              ) : (
+                <HeartButton
+                  data={data}
+                  favourites={favourites}
+                  item={false}
+                  foundItem={foundItem}
+                />
+              );
+            })()}
         </div>
       </div>
       <div className=" flex justify-center">
-        {imageUrl && <Image src={imageUrl} alt={name} className="mt-2" width={150} height={150} />}
+        {imageUrl && (
+          <Image
+            src={imageUrl}
+            alt={name}
+            className="mt-2"
+            width={150}
+            height={150}
+          />
+        )}
       </div>
     </Link>
   );
